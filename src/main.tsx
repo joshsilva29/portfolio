@@ -1,7 +1,7 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import { createBrowserRouter, createHashRouter, RouterProvider } from 'react-router-dom'
 import AboutPage from "./pages/about-page/AboutPage"
 import ContactPage from "./pages/contact-page/ContactPage"
 import HomePage from "./pages/home-page/HomePage"
@@ -14,7 +14,7 @@ let about = import.meta.env.BASE_URL + 'about';
 let mnfy = import.meta.env.BASE_URL + 'mnfy';
 let portfolio = import.meta.env.BASE_URL + 'portfolio';
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     path: home,
     element: <HomePage />,
