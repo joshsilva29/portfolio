@@ -8,11 +8,13 @@ import HomePage from "./pages/home-page/HomePage"
 import Pokemonify from "./pages/project-pages/pokemonify/Pokemonify"
 import Portfolio from "./pages/project-pages/portfolio/Portfolio"
 
-let home = import.meta.env.BASE_URL;
-let contact = import.meta.env.BASE_URL + 'contact';
-let about = import.meta.env.BASE_URL + 'about';
-let mnfy = import.meta.env.BASE_URL + 'mnfy';
-let portfolio = import.meta.env.BASE_URL + 'portfolio';
+let hash = true;
+
+let home = hash ? "/" : import.meta.env.BASE_URL;
+let contact = hash ? "/contact" : import.meta.env.BASE_URL + 'contact';
+let about = hash ? "/about" : import.meta.env.BASE_URL + 'about';
+let mnfy = hash ? "/mnfy" : import.meta.env.BASE_URL + 'mnfy';
+let portfolio = hash ? "/portfolio" : import.meta.env.BASE_URL + 'portfolio';
 
 const router = createHashRouter([
   {
